@@ -25,9 +25,6 @@ public class LagCommand extends CommandTemplate {
 	}
 
 	private boolean scheduleLagOMeter(@Nullable Player player) {
-		LagOMeter lagOMeter = new LagOMeter(plugin, player);
-		int taskId = plugin.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, lagOMeter, 0, 600);
-		lagOMeter.setTaskId(taskId);
-		return taskId != -1;
+		return new LagOMeter(plugin, player).start();
 	}
 }
