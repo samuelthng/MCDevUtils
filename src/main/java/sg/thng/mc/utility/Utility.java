@@ -3,6 +3,7 @@ package sg.thng.mc.utility;
 import org.bukkit.plugin.java.JavaPlugin;
 import sg.thng.mc.utility.Commands.*;
 import sg.thng.mc.utility.Listeners.EventExample;
+import sg.thng.mc.utility.Runnables.LagOMeter;
 
 import java.util.logging.Level;
 
@@ -24,6 +25,13 @@ public final class Utility extends JavaPlugin {
 
         // Initialize Commands
         this.commandManager = new CommandManager(this);
+
+        // Scheduled tasks - Lag-O-Meter
+        LagOMeter lagometer = new LagOMeter(this);
+        int lagTaskId = getServer()
+                .getScheduler()
+                .scheduleSyncRepeatingTask(this, lagometer, 0, 600);
+        if (lagTaskId != -1) getLogger().log(Level.INFO, "Scheduled Lag-O-Meter: " + lagTaskId);
     }
 
     @Override
