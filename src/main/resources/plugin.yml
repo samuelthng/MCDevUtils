@@ -1,0 +1,16 @@
+name: ThngUtils
+version: ${project.version}
+main: sg.thng.mc.utility.Utility
+api-version: 1.17
+prefix: 'THNG][UTILS'
+authors: [ imTetsuu ]
+description: Developer recipe and utility plugin.
+commands:
+  god:
+    description: Toggles player invulnerability.
+  heal:
+    description: Sets player health and food level to 20.
+  feed:
+    description: Sets player food level to 20.
+  fly:
+    description: Toggles flying for a player.
