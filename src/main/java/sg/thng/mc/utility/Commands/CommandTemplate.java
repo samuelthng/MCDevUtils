@@ -15,7 +15,7 @@ import java.util.logging.Level;
 public abstract class CommandTemplate implements CommandExecutor {
 	public String command;
 	public String permission;
-	private final JavaPlugin plugin;
+	public final JavaPlugin plugin;
 
 	public CommandTemplate(JavaPlugin plugin, String command, String permission) {
 		this.command = command;

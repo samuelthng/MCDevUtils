@@ -20,5 +20,6 @@ public class CommandManager {
 		new HealCommand(plugin); // - Heal
 		new FeedCommand(plugin); // - Heal
 		new FlyCommand(plugin); // - Fly
+		new LagCommand(plugin); // - Lag
 	}
 }

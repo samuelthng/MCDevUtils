@@ -14,3 +14,5 @@ commands:
     description: Sets player food level to 20.
   fly:
     description: Toggles flying for a player.
+  lag:
+    description: Samples TPS 5 counts with a period of 600 ticks.

@@ -25,13 +25,6 @@ public final class Utility extends JavaPlugin {
 
         // Initialize Commands
         this.commandManager = new CommandManager(this);
-
-        // Scheduled tasks - Lag-O-Meter
-        LagOMeter lagometer = new LagOMeter(this);
-        int lagTaskId = getServer()
-                .getScheduler()
-                .scheduleSyncRepeatingTask(this, lagometer, 0, 600);
-        if (lagTaskId != -1) getLogger().log(Level.INFO, "Scheduled Lag-O-Meter: " + lagTaskId);
     }
 
     @Override
